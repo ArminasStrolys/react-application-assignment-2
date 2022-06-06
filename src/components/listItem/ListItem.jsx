@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const ListItem = (props) => {
-    return (
-<>
-    <div className='post'>
+  return (
+    <>
+      <div className="post">
         <p>Title: {props.title}</p>
         <p>User: {props.userId}</p>
-    </div>
-</>
-    );
-}
+      </div>
+    </>
+  );
+};
 
 export default ListItem;
