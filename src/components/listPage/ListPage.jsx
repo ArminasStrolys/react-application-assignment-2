@@ -19,6 +19,7 @@ const ListPage = () => {
         <ListItem
         key={post.id}
         title={post.title}
+        body={post.body}
         userId={post.userId} />
       ))}
     </div>

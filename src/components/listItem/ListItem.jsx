@@ -4,7 +4,8 @@ const ListItem = (props) => {
   return (
     <>
       <div className="post">
-        <p>Title: {props.title}</p>
+        <h3>{props.title}</h3>
+        <p>{props.body}</p>
         <p>User: {props.userId}</p>
       </div>
     </>
