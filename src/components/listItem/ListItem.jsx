@@ -2,9 +2,12 @@ import React from 'react';
 
 const ListItem = (props) => {
     return (
-        <div>
-            Singular list item
-        </div>
+<>
+    <div className='post'>
+        <p>Title: {props.title}</p>
+        <p>User: {props.userId}</p>
+    </div>
+</>
     );
 }
 
