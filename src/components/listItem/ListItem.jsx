@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = (props) => {
+
   return (
     <>
-      <a className="detail" href="/details">
+<Link className="detail" to="/details" state={props.id}>
+
         <div className="post">
           <table>
             <tbody>
@@ -21,7 +24,7 @@ const ListItem = (props) => {
             </tbody>
           </table>
         </div>
-      </a>
+      </Link>
     </>
   );
 };

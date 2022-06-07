@@ -11,3 +11,11 @@ back-button:hover {
   background-color: rgb(255, 222, 179);
   cursor: pointer;
 }
+.detail-item {
+  margin: 100px 20%;
+  padding: 20px;
+  background-color: $list-item-color;
+  ::first-letter {
+    text-transform: capitalize;
+  }
+}

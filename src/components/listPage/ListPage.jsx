@@ -16,16 +16,15 @@ const ListPage = () => {
     <div>
       <div className="new-form">
         <form action="/new-record">
-          {/* <a href="/new-record"> */}
-            <button type="submit">Add new record</button>
-          {/* </a> */}
+          <button type="submit">Add new record</button>
         </form>
       </div>
       {posts.map((post) => (
         <ListItem
           key={post.id}
+          id={post.id}
           title={post.title}
-          body={post.body}
+                      body={post.body}
           userId={post.userId}
         />
       ))}
