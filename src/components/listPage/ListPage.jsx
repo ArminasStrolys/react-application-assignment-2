@@ -14,7 +14,14 @@ const ListPage = () => {
 
   return (
     <div>
-      Tester
+
+      <div className="new-form">
+      <form onSubmit={(e)=>e.preventDefault()}>
+          <button><a href="/new-record">Add new record</a>
+
+          </button>
+      </form>
+      </div>
       {posts.map((post) => (
         <ListItem
         key={post.id}
