@@ -5,9 +5,21 @@ const ListItem = (props) => {
     <>
       <a className="detail" href="/details">
         <div className="post">
-          <h3>{props.title}</h3>
-          <p>{props.body}</p>
-          <p>User: {props.userId}</p>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <b>{props.title}</b>
+                </td>
+              </tr>
+              <tr>
+                <td>{props.body}</td>
+              </tr>
+              <tr>
+                <td>User: {props.userId}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </a>
     </>

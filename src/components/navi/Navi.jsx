@@ -8,19 +8,9 @@ import DetailsPage from '../detailsPage/DetailsPage';
 const Navi = () => {
     return (
         <div>
-            <ul className="nav-items">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/list-page">List page</a>
-        </li>
-      </ul>
-
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/list-page" element={<ListPage />} />
+          <Route path="/" element={<ListPage />} />
           <Route path="/new-record" element={<NewRecordForm />} />
           <Route path="/details" element={<DetailsPage />} />
         </Routes>

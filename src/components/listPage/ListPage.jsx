@@ -14,19 +14,20 @@ const ListPage = () => {
 
   return (
     <div>
-
       <div className="new-form">
-      <form onSubmit={(e)=>e.preventDefault()}>
-          <button><a href="/new-record">Add new record</a>
-          </button>
-      </form>
+        <form action="/new-record">
+          {/* <a href="/new-record"> */}
+            <button type="submit">Add new record</button>
+          {/* </a> */}
+        </form>
       </div>
       {posts.map((post) => (
         <ListItem
-        key={post.id}
-        title={post.title}
-        body={post.body}
-        userId={post.userId} />
+          key={post.id}
+          title={post.title}
+          body={post.body}
+          userId={post.userId}
+        />
       ))}
     </div>
   );
