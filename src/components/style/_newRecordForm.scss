@@ -39,27 +39,30 @@
     }
   }
 }
-.post-pop-up{
-        display: none;
-    width: 700px;
-    height: 400px;
-    color: black;
+.post-pop-up {
+  word-break: break-all;
+  width: 700px;
+  height: 300px;
+  color: black;
+  padding: 10px;
+  background-color: rgb(236, 218, 195);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  table {
     padding: 10px;
-    background-color: $list-item-color;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .close-window{
-        display: block;
-        position: absolute;
-        right: 10px;
-        padding: 5px 10px;
-        background-color: white;
-        border: none;
-    }
-    .close-window:hover{
-        background-color: $list-item-color;
-        cursor: pointer;
-        }
+  }
+  .close-window {
+    display: block;
+    position: relative;
+    left: 670px;
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+  }
+  .close-window:hover {
+    background-color: rgb(114, 114, 114);
+    cursor: pointer;
+  }
 }

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const NewRecordForm = () => {
-  const [newPost, setNewPost] = useState();
+  const [newPost, setNewPost] = useState([]);
   const [visible, setVisible] = useState(true);
   const [userPost, setUserPost] = useState({
-    body:'',
-    title:'',
-    userId:''
-  })
+    body: "",
+    title: "",
+    userId: "",
+  });
 
   const handleVisibility = (e) => {
     e.preventDefault();
@@ -15,21 +15,31 @@ const NewRecordForm = () => {
   };
 
   const handleChange = (e) => {
-    console.log(e.target.value)
-  }
+    e.preventDefault();
+    setVisible(false);
+    console.log(newPost);
+  };
+
+  const handleInputChange = (e, data) => {
+    const copyNewPost = { ...userPost };
+    copyNewPost[data] = e.target.value;
+    setUserPost(copyNewPost);
+  };
 
   useEffect(() => {
     const createPost = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({  userId: userPost.userId, title: userPost.title, body: userPost.body })
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: userPost.userId,
+        title: userPost.title,
+        body: userPost.body,
+      }),
     };
-    fetch('https://jsonplaceholder.typicode.com/posts', createPost)
-        .then(response => response.json())
-        .then(data => console.log(data));
-}, []);
-
-  console.log(newPost);
+    fetch("https://jsonplaceholder.typicode.com/posts", createPost)
+      .then((response) => response.json())
+      .then((data) => setNewPost(data));
+  }, [userPost.body, userPost.title, userPost.userId]);
 
   return (
     <div>
@@ -39,14 +49,21 @@ const NewRecordForm = () => {
         </button>
       </form>
       <>
-        <form onSubmit={(e) => e.preventDefault()} className="new-form-page">
+        <form onSubmit={handleChange} className="new-form-page">
           <div className="post">
             <table className="table">
               <tbody>
                 <tr>
                   <td>
                     <label>Title: </label>
-                    <input type="text" placeholder="Enter title here" />
+                    <input
+                      type="text"
+                      placeholder="Enter title here"
+                      required="required"
+                      onChange={(e) =>
+                        setUserPost({ ...userPost, title: e.target.value })
+                      }
+                    />
                   </td>
                 </tr>
                 <tr>
@@ -58,13 +75,22 @@ const NewRecordForm = () => {
                       rows="4"
                       cols="50"
                       placeholder="Enter context here"
+                      required="required"
+                      onChange={(e) =>
+                        setUserPost({ ...userPost, body: e.target.value })
+                      }
                     ></textarea>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <label>User name: </label>
-                    <input type="text" placeholder="Enter your name here" onChange={handleChange}/>
+                    <input
+                      type="text"
+                      required="required"
+                      placeholder="Enter your name here"
+                      onChange={(e) => handleInputChange(e, "userId")}
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -88,14 +114,14 @@ const NewRecordForm = () => {
               <tbody>
                 <tr>
                   <td>
-                    <b>TITLE</b>
+                    <b>{newPost.title}</b>
                   </td>
                 </tr>
                 <tr>
-                  <td>BODY</td>
+                  <td>{newPost.body}</td>
                 </tr>
                 <tr>
-                  <td>USER</td>
+                  <td>User: {newPost.userId}</td>
                 </tr>
               </tbody>
             </table>
