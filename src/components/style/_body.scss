@@ -1,18 +1,18 @@
 @import "_var.scss";
 
-body{
-    background-color: $body-color;
-    .back-button {
-        padding: 10px;
-        width: 150px;
-        background-color: antiquewhite;
-        border: none;
-        border-radius: 2px;
-        transition: 0.3s;
-      }
-      .back-button:hover {
-        background-color: rgb(255, 222, 179);
-        cursor: pointer;
-        scale: 0.95;
-      }
+body {
+  background-color: $body-color;
+  .back-button {
+    padding: 10px;
+    width: 150px;
+    background-color: $btn-color;
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .back-button:hover {
+    background-color: $btn-hover-color;
+    cursor: pointer;
+    scale: 0.95;
+  }
 }

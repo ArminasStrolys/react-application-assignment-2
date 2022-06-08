@@ -1,6 +1,12 @@
 @import "_var.scss";
 
-.detail {
+.new-form-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: $list-item-color;
   .post {
     .table {
       width: 100%;
@@ -15,5 +21,45 @@
         box-sizing: border-box;
       }
     }
+    .form-submit-btn {
+      border: none;
+      background-color: $form-btn-color;
+      width: 150px;
+      height: 30px;
+      margin: 20px 0 0 0;
+      transition: 0.2s;
+      position: relative;
+      top: 5px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .form-submit-btn:hover {
+      background-color: $form-btn-hover-color;
+      cursor: pointer;
+    }
   }
+}
+.post-pop-up{
+        display: none;
+    width: 700px;
+    height: 400px;
+    color: black;
+    padding: 10px;
+    background-color: $list-item-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .close-window{
+        display: block;
+        position: absolute;
+        right: 10px;
+        padding: 5px 10px;
+        background-color: white;
+        border: none;
+    }
+    .close-window:hover{
+        background-color: $list-item-color;
+        cursor: pointer;
+        }
 }
