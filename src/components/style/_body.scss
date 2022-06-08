@@ -2,7 +2,7 @@
 
 body {
   background-color: $body-color;
-  .back-button {
+  .button-style {
     padding: 10px;
     width: 150px;
     background-color: $btn-color;
@@ -10,9 +10,46 @@ body {
     border-radius: 2px;
     transition: 0.3s;
   }
-  .back-button:hover {
+  .button-style:hover {
     background-color: $btn-hover-color;
     cursor: pointer;
-    scale: 0.95;
+  }
+  .filter-button-1,
+  .filter-button-2 {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 150px;
+    background-color: $secondary-btn-color;
+    border: none;
+    padding: 10px;
+    transition: 0.2s;
+  }
+  .filter-button-2 {
+    top: 60px;
+  }
+  .filter-button-1:hover,
+  .filter-button-2:hover {
+    background-color: $secondary-btn-hover-color;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    .filter-button-1 {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      width: 80px;
+      height: 80px;
+    }
+    .filter-button-2 {
+      top: 80px;
+      right: 15px;
+      left: auto;
+      width: 80px;
+      top: 10px;
+      height: 80px;
+    }
   }
 }

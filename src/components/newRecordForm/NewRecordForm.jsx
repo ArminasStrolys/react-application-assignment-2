@@ -44,7 +44,7 @@ const NewRecordForm = () => {
   return (
     <div>
       <form action="/">
-        <button className="back-button" type="submit">
+        <button className="button-style" type="submit">
           Back
         </button>
       </form>

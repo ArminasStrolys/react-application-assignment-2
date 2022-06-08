@@ -23,7 +23,7 @@
     }
     .form-submit-btn {
       border: none;
-      background-color: $btn-hover-color;
+      background-color: $secondary-btn-color;
       width: 150px;
       height: 30px;
       margin: 20px 0 0 0;
@@ -34,7 +34,7 @@
       transform: translate(-50%, -50%);
     }
     .form-submit-btn:hover {
-      background-color: $form-btn-hover-color;
+      background-color: $secondary-btn-hover-color;
       cursor: pointer;
     }
   }
