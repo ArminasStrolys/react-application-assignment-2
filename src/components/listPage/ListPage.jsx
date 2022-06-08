@@ -16,7 +16,7 @@ const ListPage = () => {
     <div>
       <div className="new-form">
         <form action="/new-record">
-          <button type="submit">Add new record</button>
+          <button className="back-button" type="submit">Add new record</button>
         </form>
       </div>
       {posts.map((post) => (
@@ -24,7 +24,7 @@ const ListPage = () => {
           key={post.id}
           id={post.id}
           title={post.title}
-                      body={post.body}
+          // body={post.body}
           userId={post.userId}
         />
       ))}

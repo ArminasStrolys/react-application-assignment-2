@@ -1,16 +1,5 @@
 @import "_var.scss";
 
-.back-button {
-  padding: 10px;
-  width: 150px;
-  background-color: antiquewhite;
-  border: none;
-  transition: 0.3s;
-}
-back-button:hover {
-  background-color: rgb(255, 222, 179);
-  cursor: pointer;
-}
 .detail-item {
   margin: 100px 20%;
   padding: 20px;
