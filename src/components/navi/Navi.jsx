@@ -10,6 +10,7 @@ const Navi = () => {
       <Router>
         <Routes>
           <Route path="/" element={<ListPage />} />
+          <Route path="/!" element={<ListPage />} />
           <Route path="/new-record" element={<NewRecordForm />} />
           <Route path="/details" element={<DetailsPage />} />
         </Routes>
