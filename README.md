@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# A quick guide to start the app
+1) Open project with you ide
+2) Enter "npm i" to terminal
+3) Enter "npm start" to terminal
+
 ## Available Scripts
 
 In the project directory, you can run:
