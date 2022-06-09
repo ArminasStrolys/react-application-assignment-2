@@ -6,8 +6,12 @@
   display: block;
   text-decoration: none;
   color: $black;
+  .post:hover {
+    background-color: $white;
+  }
   .post {
     padding: 10px;
+    transition: 0.5s;
     background-color: $list-item-color;
     ::first-letter {
       text-transform: capitalize;

@@ -66,6 +66,14 @@
     background-color: $black;
     cursor: pointer;
   }
+  .td-title,
+  .td-body,
+  .td-author {
+    background-color: $btn-color;
+    border: 1px solid $gray;
+    width: 10%;
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 700px) {
   .post-pop-up {

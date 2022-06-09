@@ -27,23 +27,26 @@ body {
     padding: 10px;
     transition: 0.2s;
   }
-  .filter-button-2, .filter-button-active-2 {
+  .filter-button-2,
+  .filter-button-active-2 {
     top: 60px;
   }
-  .filter-button-active-1, .filter-button-active-2 {
+  .filter-button-active-1,
+  .filter-button-active-2 {
     background-color: $secondary-btn-active;
   }
   .filter-button-1:hover,
   .filter-button-2:hover,
   .filter-button-active-1:hover,
-  .filter-button-active-2:hover  {
+  .filter-button-active-2:hover {
     background-color: $secondary-btn-hover-color;
     cursor: pointer;
   }
 }
 @media screen and (max-width: 700px) {
   body {
-    .filter-button-1 {
+    .filter-button-1,
+    .filter-button-2 {
       position: absolute;
       left: 15px;
       top: 10px;
@@ -54,9 +57,7 @@ body {
       top: 80px;
       right: 15px;
       left: auto;
-      width: 80px;
       top: 10px;
-      height: 80px;
     }
   }
 }

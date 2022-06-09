@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ListItem = (props) => {
-
   return (
     <>
-<Link className="detail" to="/details" state={props.id}>
-
+      <Link className="detail" to="/details" state={props.id}>
         <div className="post">
           <table>
             <tbody>

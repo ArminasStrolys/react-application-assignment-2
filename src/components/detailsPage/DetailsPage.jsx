@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 
 const DetailsPage = (props) => {
   const [details, setDetails] = useState([]);
@@ -25,7 +25,7 @@ const DetailsPage = (props) => {
         <table>
           <tbody>
             <tr>
-            {props.test}
+              {props.test}
               <td>
                 <b>{details.title}</b>
               </td>

@@ -1,10 +1,10 @@
-@import '_var.scss';
-.pagination{
-    margin-top: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-.pagerMain {
+@import "_var.scss";
+.pagination {
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .pagerMain {
     float: left;
     padding-left: 0;
     .pagerMini {
@@ -34,9 +34,9 @@
   }
 }
 @media screen and (max-width: 700px) {
-    body {
-      .pagination {
-        margin-top: 40px;
+  body {
+    .pagination {
+      margin-top: 40px;
     }
-}
   }
+}

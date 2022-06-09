@@ -113,15 +113,15 @@ const NewRecordForm = () => {
             <table>
               <tbody>
                 <tr>
-                  <td>
+                  <td className="td-title">
                     <b>{newPost.title}</b>
                   </td>
                 </tr>
                 <tr>
-                  <td>{newPost.body}</td>
+                  <td className="td-body">{newPost.body}</td>
                 </tr>
                 <tr>
-                  <td>Author: {newPost.userId}</td>
+                  <td className="td-author">Author: {newPost.userId}</td>
                 </tr>
               </tbody>
             </table>
