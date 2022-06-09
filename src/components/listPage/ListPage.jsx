@@ -11,13 +11,11 @@ const ListPage = () => {
     filter.ascending === true
       ? setFilter({ ...filter, ascending: false })
       : setFilter({ ...filter, ascending: true });
-    console.log("works asc");
   };
   const handleUnique = () => {
     filter.unique === true
       ? setFilter({ ...filter, unique: false })
       : setFilter({ ...filter, unique: true });
-    console.log("works unique");
   };
 
   const [posts, setPosts] = useState([]);
@@ -27,6 +25,12 @@ const ListPage = () => {
       .then((data) => setPosts(data))
       .catch((error) => console.log(error));
   }, []);
+
+  const uniqueArray = posts.filter(
+    (value, index, self) =>
+      index === self.findIndex((t) => t.userId === value.userId)
+  );
+  console.log(uniqueArray);
 
   return (
     <div>
@@ -46,32 +50,33 @@ const ListPage = () => {
         </form>
       </div>
 
-      {posts.map(
-        (post) => (
+      {filter.unique === false
+        ? posts.map(
+            (post) => (
+              filter.ascending === true
+                ? posts.sort((a, b) => a.title.localeCompare(b.title))
+                : posts.sort((a, b) => b.title.localeCompare(a.title)),
+              (
+                <ListItem
+                  key={post.id}
+                  id={post.id}
+                  title={post.title}
+                  userId={post.userId}
+                />
+              )
+            )
+          )
+        : uniqueArray.map((post) => (
           filter.ascending === true
-            ? posts.sort((a, b) => a.title.localeCompare(b.title))
-            : posts.sort((a, b) => b.title.localeCompare(a.title)),
-          (
+                ? posts.sort((a, b) => a.title.localeCompare(b.title))
+                : posts.sort((a, b) => b.title.localeCompare(a.title)),
             <ListItem
               key={post.id}
               id={post.id}
               title={post.title}
-              // body={post.body}
               userId={post.userId}
             />
-          )
-        )
-      )}
-
-      {/* {posts.map((post) => (
-        <ListItem
-          key={post.id}
-          id={post.id}
-          title={post.title}
-          // body={post.body}
-          userId={post.userId}
-        />
-      ))} */}
+          ))}
     </div>
   );
 };
