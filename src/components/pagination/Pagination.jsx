@@ -8,7 +8,7 @@ const Pagination = (props) => {
     }
 
     return (
-        <nav>
+        <nav className='pagination'>
         <ul className="pagerMain">
           {pageNumbers.map((number) => (
             <li key={number} className="pagerMini">

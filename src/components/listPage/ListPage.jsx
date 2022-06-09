@@ -49,10 +49,10 @@ const ListPage = () => {
           </button>
         </form>
         <form onSubmit={(e) => e.preventDefault()}>
-          <button onClick={handleAscending} className="filter-button-1">
+          <button onClick={handleAscending} className={filter.ascending === true ? "filter-button-1" : "filter-button-active-1"}>
             Filter by: A-Z, Z-A
           </button>
-          <button onClick={handleUnique} className="filter-button-2">
+          <button onClick={handleUnique} className={filter.unique === false ? "filter-button-2" : "filter-button-active-2"}>
             Filter by: unique users
           </button>
         </form>

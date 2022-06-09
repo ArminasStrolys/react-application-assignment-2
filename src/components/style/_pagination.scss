@@ -1,0 +1,42 @@
+@import '_var.scss';
+.pagination{
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+.pagerMain {
+    float: left;
+    padding-left: 0;
+    .pagerMini {
+      display: inline-block;
+      padding: 10px 5px;
+    }
+    .pageLink {
+      text-decoration: none;
+      border: 1px solid $btn-color;
+      width: 25px;
+      height: 35px;
+      line-height: 35px;
+      display: block;
+      text-align: center;
+    }
+    .pageLink:visited {
+      color: $black;
+    }
+    .pageLink:hover {
+      color: $black;
+      background-color: $btn-hover-color;
+    }
+    .pageLink:focus {
+      background-color: $btn-color;
+      color: $black;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+    body {
+      .pagination {
+        margin-top: 40px;
+    }
+}
+  }
